@@ -365,7 +365,7 @@ Heart react image spacing
     width: 300px;
     height: 245px;
     display: inline-block;
-    background-size: 500px;
+    background-size: 300px;
     border-radius: 4px;
     margin: 4px;
     position: relative;
@@ -498,4 +498,8 @@ Heart react image spacing
 .logredirect {
     width: 100px;
     height: 35px;
+}
+
+.mySlides {
+    display: none;
 }

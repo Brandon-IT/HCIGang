@@ -36,19 +36,72 @@ Purpose: This page is intended to be a page where users can match or skip others
       <a href="@Url.Action("Index", "Home")">Logout</a>
   </div>
 </nav>
+
+<div class="mySlides">
 <div class="container">
 	<label class="textOverImage" style="background-image:url(../images/hank.jpeg)"</label>
     <input type="checkbox" />
     <h2>Hank Smith</h2>
     <div> <br/> <strong>Bristol, TN</strong><br/><strong>Age:</strong> 87<br/><strong>Retired</strong><br/>Looking to find me a gal to spend the rest of my life with.</div>
 </div>
+</div>
 
+<div class="mySlides">
+<div class="container">
+	<label class="textOverImage" style="background-image:url(../images/brenda.jpg)"</label>
+    <input type="checkbox" />
+    <h2>Brenda Key</h2>
+    <div> <br/> <strong>Johnson City, TN</strong><br/><strong>Age:</strong> 67<br/><strong>Retired</strong><br/>Looking for a nice man to love my grandchildren.</div>
+</div>
+</div>
+
+<div class="mySlides">
+<div class="container">
+	<label class="textOverImage" style="background-image:url(../images/bluelynn.jpg)"</label>
+    <input type="checkbox" />
+    <h2>Bluelynn Ray</h2>
+    <div> <br/> <strong>Kingsport, TN</strong><br/><strong>Age:</strong> 63<br/><strong>Retired</strong><br/>Looking for the love of my life.</div>
+</div>
+</div>
 
 
 <div class="button-container-div">
 	<a href="@Url.Action("Matched", "Home")" class="likereact w3-button w3-xl-large w3-circle w3-xlarge w3-ripple w3-teal" style="z-index:0"><i class="fa fa-heart fa-2x"></i></a>
-	<a class="dislikereact w3-button w3-xl-large w3-circle w3-xlarge w3-ripple w3-red" style="z-index:0"><i class="fa fa-x fa-2x"></i></a>
+	<a class="dislikereact w3-button w3-xl-large w3-circle w3-xlarge w3-ripple w3-red" style="z-index:0"><i  class="fa fa-x fa-2x" onclick="plusSlides(1)"></i></a>
 </div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
 
        <!-- Footer -->
 <div class="container">
