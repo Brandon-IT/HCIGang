@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 15px;
 }
 
     .header a {
@@ -89,9 +90,7 @@ p {
 
 .footer {
     font-family: Garamond, Baskerville, "Baskerville Old Face";
-
     max-width: 600px;
-
     text-align: center;
     padding-right: 0px;
     padding-bottom: 50px;
@@ -297,21 +296,21 @@ input[type=radio] {
 }
 
 .likereact {
-    height: 90px;
-    width: 100px;
+    height: 70px;
+    width: 80px;
 }
 
 /*
 Heart react image spacing 
 */
 .fa.fa-2x {
-    padding: 10px;
+    padding-top: 3px;
 }
 
 
 .dislikereact {
-    height: 90px;
-    width: 100px;
+    height: 70px;
+    width: 80px;
     margin-left: 50px;
 }
 
@@ -380,6 +379,8 @@ Heart react image spacing
     .textOverImage > div, .textOverImage > h2 {
         position: absolute;
         background-color: rgba(255,255,255,0.8);
+        border-color: rgba(0,0,0,0.8);
+        border-style: solid;
         bottom: 20px;
         left: 4px;
         right: 4px;

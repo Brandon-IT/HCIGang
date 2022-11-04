@@ -8,7 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Matched\" />
+    <Compile Remove="Views\Matched\**" />
+    <Content Remove="Views\Matched\**" />
+    <EmbeddedResource Remove="Views\Matched\**" />
+    <None Remove="Views\Matched\**" />
   </ItemGroup>
 
 </Project>
