@@ -1,0 +1,75 @@
+﻿<!-- FindMatches.cshtml
+Created by: Cameron Dawson
+Purpose: This page is intended to be a page where users can login or choose to sign up for the site.
+-->
+<!DOCTYPE html>
+<html>
+
+    <!-- Header and Title -->
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Login Page">
+        <meta name="keywords" content="Login">
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+      <div class="header">
+    <h1> <a href="@Url.Action("AccountCreate", "Home")" class="logo"><img src="~/images/logo.png" alt="Last Hope Dating"/></a></h1> 
+  </div>
+
+<!-- Body -->
+
+<body>
+<nav>
+
+    <!-- Navigation Bar -->
+  <div class="sidenav">
+
+  </div>
+</nav>  
+        <div class="container">
+            <label class="emaillab" for="username"><b>Email</b></label>
+            <br>
+            <input type="text" placeholder="Email" required>
+            <br>
+            <label class="passlab" for="password"><b>Password</b></label>
+            <br>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <br>
+            <input type="checkbox" class="showcheck" id="pass" onclick="showpass(this);">
+            <label class="showpass">Show Password</label>
+
+            <script type="text/javascript">
+                function showpass(check_box) {
+                    var spass = document.getElementById("password");
+                    if (check_box.checked)
+                        spass.setAttribute("type", "text");
+                    else
+                        spass.setAttribute("type", "password");
+                }
+           </script>
+
+            <br>
+            <div class="inputbut">
+            <button type="button" class="forgotpass">Forgot Password</button>
+            <button type="submit" class="loginbut"><a href="@Url.Action("FindMatches", "Home")">Login</a></button>
+            </div>
+        <br>
+        <div class="createcontain">
+            <label>Don't have an account?</label>
+            <br />
+            <button type="button" class="createacc"><a href="@Url.Action("AccountCreate", "Home")">Create Account</a></button>
+
+        </div>
+       
+    
+               <!-- Footer -->
+    <div class="footer">
+    <p>&copy; 2022 Last Hope Dating</p>
+	</div>
+    </div>
+
+    
+    
+    </body>
+</html>
